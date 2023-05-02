@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Components/NavBar/NavBar.jsx", "src/app/Components/NavBar/Discover/Discover.jsx", "src/app/Components/Componentsindex.js", "src/app/Components/NavBar/index.js", "src/app/Components/NavBar/SideBar/SideBar.jsx", "app/Components/Button/Button.jsx"],
   "exclude": ["node_modules"]
 }
