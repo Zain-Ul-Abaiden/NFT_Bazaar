@@ -1,27 +1,25 @@
 "use client"
-
-import React, { useState, useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-//--- Important icons
+//----IMPORT ICON
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { CgMenuLeft, CgMenuRight } from "react-icons/cg";
 
-//-- Internal Import
+//INTERNAL IMPORT
 import Style from "./NavBar.module.css";
 import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
 import { Button } from "../Componentsindex";
-import img from "../assets/img";
+import images from "../assets/img/index";
 
 const NavBar = () => {
-  // UseState
+  //----USESTATE COMPONNTS
   const [discover, setDiscover] = useState(false);
   const [help, setHelp] = useState(false);
   const [notification, setNotification] = useState(false);
-  const [openSideMenu, setOpenSideMenu] = useState(false);
   const [profile, setProfile] = useState(false);
+  const [openSideMenu, setOpenSideMenu] = useState(false);
 
   const openMenu = (e) => {
     const btnText = e.target.innerText;
@@ -65,23 +63,23 @@ const NavBar = () => {
     }
   };
 
-  const openSideBar = ()=>{
-    if(!openSideMenu){
+  const openSideBar = () => {
+    if (!openSideMenu) {
       setOpenSideMenu(true);
-    }else{
-      setOpenSideMenu(false)
+    } else {
+      setOpenSideMenu(false);
     }
-  }
+  };
+
   return (
-    <div className={Style.navber}>
+    <div className={Style.navbar}>
       <div className={Style.navbar_container}>
-        {/* LEFT SECTION */}
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
             <Image
-              src={img.logo}
+              src={images.capture}
               alt="NFT MARKET PLACE"
-              width={100}
+              width={120}
               height={100}
             />
           </div>
@@ -93,7 +91,7 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* RIGHT SECTION */}
+        {/* //END OF LEFT SECTION */}
         <div className={Style.navbar_container_right}>
           <div className={Style.navbar_container_right_discover}>
             {/* DISCOVER MENU */}
@@ -115,7 +113,7 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* NOTIFICATION MENU */}
+          {/* NOTIFICATION */}
           <div className={Style.navbar_container_right_notify}>
             <MdNotifications
               className={Style.notify}
@@ -126,27 +124,30 @@ const NavBar = () => {
 
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
-            <Button btnName="Create" handleClick={() => {}}/>
+            <Button btnName="Create" handleClick={() => {}} />
           </div>
 
           {/* USER PROFILE */}
+
           <div className={Style.navbar_container_right_profile_box}>
             <div className={Style.navbar_container_right_profile}>
               <Image
-                src={img.user1}
+                src={images.user1}
                 alt="Profile"
                 width={40}
                 height={40}
                 onClick={() => openProfile()}
                 className={Style.navbar_container_right_profile}
               />
+
               {profile && <Profile />}
             </div>
           </div>
 
           {/* MENU BUTTON */}
+
           <div className={Style.navbar_container_right_menuBtn}>
-            <CgMenuLeft
+            <CgMenuRight
               className={Style.menuIcon}
               onClick={() => openSideBar()}
             />
@@ -154,7 +155,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* SIDEBAR COMPONENT*/}
+      {/* SIDBAR CPMPONE/NT */}
       {openSideMenu && (
         <div className={Style.sideBar}>
           <SideBar setOpenSideMenu={setOpenSideMenu} />

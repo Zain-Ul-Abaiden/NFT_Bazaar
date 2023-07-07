@@ -55,8 +55,10 @@ import founder3 from "./founder3.jpg";
 import founder4 from "./founder4.jpg";
 import loader from "./loadergif.gif";
 import errorgif from "./error.gif";
+import capture from './capture.png'
 
 export default {
+  capture,
   hero2,
   founder1,
   founder2,
