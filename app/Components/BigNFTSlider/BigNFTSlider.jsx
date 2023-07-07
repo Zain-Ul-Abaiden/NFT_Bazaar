@@ -1,6 +1,5 @@
-"use client";
-
-import React, { useState, useCallback } from "react";
+"use client"
+import React, { useState,  useCallback } from "react";
 import Image from "next/image";
 import { AiFillFire, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";
@@ -8,8 +7,8 @@ import { TbArrowBigLeftLines, TbArrowBigRightLine } from "react-icons/tb";
 
 //INTERNAL IMPORT
 import Style from "./BigNFTSlider.module.css";
-import images from "../assets/img";
-import { Button } from "../Componentsindex";
+import images from "../assets/img/index";
+import Button from "../Button/Button";
 
 const BigNFTSilder = () => {
   const [idNumber, setIdNumber] = useState(0);
@@ -202,6 +201,8 @@ const BigNFTSilder = () => {
             <Image
               src={sliderData[idNumber].nftImage}
               alt="NFT IMAGE"
+              width={600}
+              height={660}
               className={Style.bigNFTSlider_box_right_box_img}
             />
 

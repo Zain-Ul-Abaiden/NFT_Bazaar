@@ -4,6 +4,7 @@ import Link from "next/link";
 //INTERNAL IMPORT
 import Style from "./Discover.module.css";
 
+
 const Discover = () => {
   //--------DISCOVER NAVIGATION MENU
   const discover = [
@@ -13,7 +14,7 @@ const Discover = () => {
     },
     {
       name: "Search",
-      link: "searchPage",
+      link: "searchPag",
     },
     {
       name: "Author Profile",

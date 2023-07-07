@@ -3,7 +3,7 @@ import Image from "next/image";
 
 // INTERNAL IMPORT
 import Style from "./ServiceSection.module.css";
-import images from "../assets/img";
+import images from "../assets/img/index";
 const ServiceSection = () => {
   return (
     <div className={Style.service}>
