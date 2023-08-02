@@ -16,7 +16,7 @@ const HeroSection = () => {
     <div className={Style.heroSection}>
       <div className={Style.heroSection_box}>
         <div className={Style.heroSection_box_left}>
-          <h1>{tittleData} 🖼️</h1>
+          <h1>{tittleData}🖼️</h1>
           <p>
             Discover the most outstanding NTFs in all topics of life. Creative
             your NTFs and sell them

@@ -1,28 +1,35 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Components/NavBar/NavBar.jsx", "src/app/Components/NavBar/Discover/Discover.jsx", "src/app/Components/Componentsindex.js", "src/app/Components/NavBar/index.js", "src/app/Components/NavBar/SideBar/SideBar.jsx", "app/Components/Button/Button.jsx", "app/page.jsx", "app/collection.jsx", "app/account/page.jsx", "app/connectWallet/page.jsx", "app/contactus/page.jsx", "app/layout.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "app/searchPag/page.jsx", "app/collection/page.jsx", "app/author/page.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

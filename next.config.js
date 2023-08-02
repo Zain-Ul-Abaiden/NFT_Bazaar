@@ -3,6 +3,12 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
 
-module.exports = nextConfig
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ["nft-bazaar.infura-ipfs.io", "infura-ipfs.io"],
+  },
+};
+
+module.exports = nextConfig;

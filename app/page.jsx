@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React,{useState,useEffect,useContext} from "react";
 import {
   HeroSection,
   Service,
@@ -16,7 +17,13 @@ import {
   Vedio,
 } from "./Components/Componentsindex";
 
+// IMPORT CONTRACT DATA
+  import {NFTMarketplaceContext} from "../Context/NFTMarketplaceContext"
 const page = () => {
+  const {checkIfWalletConnected} = useContext(NFTMarketplaceContext);
+  useEffect(()=>{
+    checkIfWalletConnected();
+  },[])
   return (
     <div>
       <HeroSection />
